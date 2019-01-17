@@ -44,58 +44,10 @@ export default {
       }, {
         id: 2,
         content: '测试内容2 2019-01-15'
-      }],
-      tableData: [{
-        id: 1,
-        name: 'apple',
-        price: '3',
-        countNum: 1,
-        totalPrice: '0'
-      }, {
-        id: 2,
-        name: 'pear',
-        price: '4',
-        countNum: 1,
-        totalPrice: '0'
-      }, {
-        id: 3,
-        name: 'banana',
-        price: '5',
-        countNum: 1,
-        totalPrice: '0'
-      }, {
-        id: ''
       }]
     }
   },
-  mounted: function () {
-    let totalAllPrice = 0
-    let data = this.tableData
-    for (let index in this.tableData) {
-      this.tableData[index].totalPrice = this.tableData[index].countNum * this.tableData[index].price
-      if (data[index].totalPrice) {
-        totalAllPrice += parseInt(data[index].totalPrice)
-      }
-    }
-    this.tableData[this.tableData.length - 1].id = '总价：￥' + totalAllPrice
-  },
   methods: {
-    arraySpanMethod ({row, column, rowIndex, columnIndex}) {
-      if (rowIndex === (this.tableData.length - 1) && columnIndex === 0) {
-        return [1, 5]
-      }
-    },
-
-    handleChange (rowIndex) {
-      this.tableData[rowIndex].totalPrice = this.tableData[rowIndex].countNum * this.tableData[rowIndex].price
-      let totalAllPrice = 0
-      for (let item of this.tableData) {
-        if (item.totalPrice) {
-          totalAllPrice += parseInt(item.totalPrice)
-        }
-      }
-      this.tableData[this.tableData.length - 1].id = '总价：￥' + totalAllPrice
-    },
     addRow () {
       let nextId = 0
       if (this.ulData.length === 0) {
