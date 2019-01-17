@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
-import DemoIndex from '@/components/DemoIndex'
+import AddRowComponent from '@/components/AddRowComponent'
 import TableComponent from '@/components/TableComponent'
 
 Vue.use(Router)
@@ -13,9 +13,9 @@ export default new Router({
       redirect: {name: 'TableComponent'}
     },
     {
-      path: '/demoIndex',
-      name: 'DemoIndex',
-      component: DemoIndex
+      path: '/addRowComponent',
+      name: 'AddRowComponent',
+      component: AddRowComponent
     },
     {
       path: '/tableComponent',
