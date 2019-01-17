@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <!--<img src="./assets/logo.png">-->
-    <el-tabs v-model="activeName2" type="border-card" @tab-click="handleClick">
-      <el-tab-pane label="双向绑定" name="first"><router-view/></el-tab-pane>
-      <el-tab-pane label="动态加行" name="second"><router-view/></el-tab-pane>
+    <el-tabs v-model="activeName" type="border-card" @tab-click="handleClick">
+      <el-tab-pane label="双向绑定" name="first">
+          <router-view/>
+      </el-tab-pane>
+      <el-tab-pane label="动态加行" name="second">
+          <router-view/>
+      </el-tab-pane>
     </el-tabs>
     <!--<router-link to="/addRowComponent" tag="button">Go to AddRowComponent</router-link>-->
     <!--<router-link to="/tableComponent" tag="button">Go to TableComponent</router-link>-->
@@ -16,7 +20,7 @@ export default {
   name: 'App',
   data () {
     return {
-      activeName2: 'first'
+      activeName: 'first'
     }
   },
   methods: {
@@ -41,4 +45,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
