@@ -3,7 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <el-tabs v-model="activeName" type="border-card" @tab-click="handleClick">
       <el-tab-pane label="双向绑定" name="first">
-          <!--<router-view/>-->
+          <!--<router-view/> 采用编程式导航方式不能写name属性-->
           <router-view name="table"/>
       </el-tab-pane>
       <el-tab-pane label="动态加行" name="second">
