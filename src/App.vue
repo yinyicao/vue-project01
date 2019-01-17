@@ -3,10 +3,12 @@
     <!--<img src="./assets/logo.png">-->
     <el-tabs v-model="activeName" type="border-card" @tab-click="handleClick">
       <el-tab-pane label="双向绑定" name="first">
-          <router-view/>
+          <!--<router-view/>-->
+          <router-view name="table"/>
       </el-tab-pane>
       <el-tab-pane label="动态加行" name="second">
-          <router-view/>
+        <!--<router-view/>-->
+        <router-view name="addRow"/>
       </el-tab-pane>
     </el-tabs>
     <!--<router-link to="/addRowComponent" tag="button">Go to AddRowComponent</router-link>-->
@@ -25,11 +27,11 @@ export default {
   },
   methods: {
     handleClick (tab, event) {
-      if (tab.$el.id === 'pane-first') {
-        this.$router.push({ path: '/tableComponent' })
-      } else {
-        this.$router.push({ path: '/addRowComponent' })
-      }
+      // if (tab.$el.id === 'pane-first') {
+      //   this.$router.push({ path: '/tableComponent' })
+      // } else {
+      //   this.$router.push({ path: '/addRowComponent' })
+      // }
       // console.log(tab.$el, event)
     }
   }
