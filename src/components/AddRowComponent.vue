@@ -31,8 +31,6 @@
 </template>
 
 <script>
-// const liComponent = {template: '#temp1'}
-// import liComponent from './liComponent.vue'
 export default {
   name: 'DemoIndex',
   data () {
@@ -67,11 +65,7 @@ export default {
     }
   },
   components: {
-    // liComponent: {
-    //   liComponent
-    // }
     liComponent: {
-      // template: '#temp1'
       template: '<li>' +
       '          <el-row :gutter="12"  style="width: 750px ; height: 80px;">' +
       '            <el-col :span="8" style="height: 80px;" >' +

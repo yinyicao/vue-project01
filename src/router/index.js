@@ -6,6 +6,7 @@ import TableComponent from '@/components/TableComponent'
 Vue.use(Router)
 
 export default new Router({
+
   // 使用“命名视图”配置方式（更优）
   routes: [
     {
